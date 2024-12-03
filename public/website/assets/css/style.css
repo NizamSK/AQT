@@ -1,0 +1,91 @@
+
+
+html{font-size: 16px;}
+
+body{
+    background-color: #000;
+    color: #fff;
+    font-family: "Inter", sans-serif;
+    font-size: 1rem;
+}
+a,a:hover{
+    text-decoration: none;
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: "Koulen", sans-serif;
+}
+.primary-btn{
+    display: inline-block;
+    background-color: #000;
+    color: #fff;
+    border: 1px solid #FF6600;
+    padding: .75rem 1.5rem;
+    min-width: 140px;
+    text-align: center;
+    transition: .3s ease;
+}
+.primary-btn:not(.nohover):hover,.primary-btn.hovered{
+    background-color: #FF6600;
+    color: #fff;
+}
+.colored-btn{
+    background-color: #FF6600;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 50px;
+    text-align: center;
+    display: inline-block;
+}
+.desc{font-size: 1rem; line-height: 1.5;}
+.desc.md{font-size: 1.125rem;}
+.desc.md2{font-size: 1.25rem;}
+.desc.lg{font-size: 1.5rem;}
+.sec-title{
+    font-size: 4rem;
+    line-height: 1.1;
+}
+.sec-title.lg{font-size: 3.5rem;}
+.br5{border-radius: 5px;}
+.br10{border-radius: 10px;}
+.br20{border-radius: 20px;}
+.text-second{color: #969696;}
+.primary-border{border-color: #FF6600 !important;}
+.formbtn{
+    font-size: 1.125rem;
+    font-weight: 500;
+    border: 2px solid #FF6600;
+    background-color: #fff;
+    color: #000;
+    border-radius: 5px;
+    min-width: 110px;
+}
+/* .formbtn.lg{
+    width: 140px;
+} */
+/*Header CSS*/
+.header-main .nav-item .nav-link{
+    color: #fff;
+    font-size: 1.125rem;
+    padding: .5rem 1rem;
+}
+/*Header CSS*/
+.apply-form{
+    background-color: #000;
+    background-image: url(../images/formbg.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+
+
+@media (max-width:575px){
+    .apply-form{
+        background-image: url(../images/formbg_mobile.jpg);
+        background-size: 100%;
+        background-position: top;
+        background-repeat: repeat-y;
+    }
+}
