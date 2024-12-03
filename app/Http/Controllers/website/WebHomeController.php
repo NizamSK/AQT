@@ -15,4 +15,20 @@ class WebHomeController extends Controller
     {
         return view('website.apply');
     }
+    public function movies()
+    {
+        return view('website.movies');
+    }
+    public function series()
+    {
+        return view('website.series');
+    }
+    public function about()
+    {
+        return view('website.about');
+    }
+    public function contact()
+    {
+        return view('website.contact');
+    }
 }

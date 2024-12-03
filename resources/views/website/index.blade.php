@@ -4,17 +4,19 @@
 <section class="hbanner">
     <div class="banner-slider">
         <div class="position-relative">
-            <img src="{{asset('website/assets/images/slide1.jpg')}}" alt="Slide" class="w-100">
+            <div class="bimgwrap">
+                <img src="{{asset('website/assets/images/slide1.jpg')}}" alt="Slide" class="w-100">
+            </div>
             <div class="position-absolute w-100 h-100 top-0 start-0 d-flex flex-column justify-content-end">
                 <div class="container py-5">
                     <div class="row">
-                        <div class="col-xl-6 col-lg-8 pb-4 pb-lg-5">
-                            <img src="{{asset('website/assets/images/slide1logo.png')}}" alt="Slide Logo" class="img-fluid mb-4 mb-lg-5">
-                            <div class="d-flex align-items-center mb-3 mb-lg-4">
+                        <div class="col-xl-6 col-lg-7 col-md-8 pb-4 pb-xl-5">
+                            <img src="{{asset('website/assets/images/slide1logo.png')}}" alt="Slide Logo" class="img-fluid mb-4 mb-xl-5">
+                            <div class="d-flex align-items-center mb-3 mb-xl-4">
                                 <img src="{{asset('website/assets/images/aqt.png')}}" alt="AQT" class="img-fluid me-2">
                                 <span class="desc lg">SERIES</span>
                             </div>
-                            <p class="desc text-second mb-4 mb-lg-5">When a struggling immigrant inherits a mysterious gift from a stranger, he believes it will  bring him fame and fortune, only to discover it is the start of a dark and violent curse</p>
+                            <p class="desc text-second mb-4 mb-xl-5">When a struggling immigrant inherits a mysterious gift from a stranger, he believes it will  bring him fame and fortune, only to discover it is the start of a dark and violent curse</p>
                             <div class="d-flex align-items-center">
                                 <div href="javascript:;" class="primary-btn nohover">SUPERNATURAL THRILLER</div>
                                 <a href="javascript:;" class="colored-btn ms-3 ms-xl-4">
@@ -29,17 +31,19 @@
             </div>
         </div>
         <div class="position-relative">
-            <img src="{{asset('website/assets/images/slide2.jpg')}}" alt="Slide" class="w-100">
+            <div class="bimgwrap">
+                <img src="{{asset('website/assets/images/slide2.jpg')}}" alt="Slide" class="w-100">
+            </div>
             <div class="position-absolute w-100 h-100 top-0 start-0 d-flex flex-column justify-content-end">
                 <div class="container py-5">
                     <div class="row">
-                        <div class="col-xl-6 col-lg-8 pb-4 pb-lg-5">
-                            <img src="{{asset('website/assets/images/slide2logo.png')}}" alt="Slide Logo" class="img-fluid mb-4 mb-lg-5">
-                            <div class="d-flex align-items-center mb-3 mb-lg-4">
+                        <div class="col-xl-6 col-lg-7 col-md-8 pb-4 pb-xl-5">
+                            <img src="{{asset('website/assets/images/slide2logo.png')}}" alt="Slide Logo" class="img-fluid mb-4 mb-xl-5">
+                            <div class="d-flex align-items-center mb-3 mb-xl-4">
                                 <img src="{{asset('website/assets/images/aqt.png')}}" alt="AQT" class="img-fluid me-2">
                                 <span class="desc lg">SERIES</span>
                             </div>
-                            <p class="desc text-second mb-4 mb-lg-5">When a struggling immigrant inherits a mysterious gift from a stranger, he believes it will  bring him fame and fortune, only to discover it is the start of a dark and violent curse</p>
+                            <p class="desc text-second mb-4 mb-xl-5">When a struggling immigrant inherits a mysterious gift from a stranger, he believes it will  bring him fame and fortune, only to discover it is the start of a dark and violent curse</p>
                             <div class="d-flex align-items-center">
                                 <div href="javascript:;" class="primary-btn nohover">SUPERNATURAL THRILLER</div>
                                 <a href="javascript:;" class="colored-btn ms-3 ms-xl-4">
@@ -54,17 +58,19 @@
             </div>
         </div>
         <div class="position-relative">
-            <img src="{{asset('website/assets/images/slide3.jpg')}}" alt="Slide" class="w-100">
+            <div class="bimgwrap">
+                <img src="{{asset('website/assets/images/slide3.jpg')}}" alt="Slide" class="w-100">
+            </div>
             <div class="position-absolute w-100 h-100 top-0 start-0 d-flex flex-column justify-content-end">
                 <div class="container py-5">
                     <div class="row">
-                        <div class="col-xl-6 col-lg-8 pb-4 pb-lg-5">
-                            <img src="{{asset('website/assets/images/slide3logo.png')}}" alt="Slide Logo" class="img-fluid mb-4 mb-lg-5">
-                            <div class="d-flex align-items-center mb-3 mb-lg-4">
+                        <div class="col-xl-6 col-lg-7 col-md-8 pb-4 pb-xl-5">
+                            <img src="{{asset('website/assets/images/slide3logo.png')}}" alt="Slide Logo" class="img-fluid mb-4 mb-xl-5">
+                            <div class="d-flex align-items-center mb-3 mb-xl-4">
                                 <img src="{{asset('website/assets/images/aqt.png')}}" alt="AQT" class="img-fluid me-2">
-                                <span class="desc lg">SERIES</span>
+                                <span class="desc lg">MOVIE</span>
                             </div>
-                            <p class="desc text-second mb-4 mb-lg-5">When a struggling immigrant inherits a mysterious gift from a stranger, he believes it will  bring him fame and fortune, only to discover it is the start of a dark and violent curse</p>
+                            <p class="desc text-second mb-4 mb-xl-5">When a struggling immigrant inherits a mysterious gift from a stranger, he believes it will  bring him fame and fortune, only to discover it is the start of a dark and violent curse</p>
                             <div class="d-flex align-items-center">
                                 <div href="javascript:;" class="primary-btn nohover">SUPERNATURAL THRILLER</div>
                                 <a href="javascript:;" class="colored-btn ms-3 ms-xl-4">
@@ -79,17 +85,19 @@
             </div>
         </div>
         <div class="position-relative">
-            <img src="{{asset('website/assets/images/slide4.jpg')}}" alt="Slide" class="w-100">
+            <div class="bimgwrap">
+                <img src="{{asset('website/assets/images/slide4.jpg')}}" alt="Slide" class="w-100">
+            </div>
             <div class="position-absolute w-100 h-100 top-0 start-0 d-flex flex-column justify-content-end">
                 <div class="container py-5">
                     <div class="row">
-                        <div class="col-xl-6 col-lg-8 pb-4 pb-lg-5">
-                            <img src="{{asset('website/assets/images/slide4logo.png')}}" alt="Slide Logo" class="img-fluid mb-4 mb-lg-5">
-                            <div class="d-flex align-items-center mb-3 mb-lg-4">
+                        <div class="col-xl-6 col-lg-7 col-md-8 pb-4 pb-xl-5">
+                            <img src="{{asset('website/assets/images/slide4logo.png')}}" alt="Slide Logo" class="img-fluid mb-4 mb-xl-5">
+                            <div class="d-flex align-items-center mb-3 mb-xl-4">
                                 <img src="{{asset('website/assets/images/aqt.png')}}" alt="AQT" class="img-fluid me-2">
-                                <span class="desc lg">SERIES</span>
+                                <span class="desc lg">MOVIE</span>
                             </div>
-                            <p class="desc text-second mb-4 mb-lg-5">When a struggling immigrant inherits a mysterious gift from a stranger, he believes it will  bring him fame and fortune, only to discover it is the start of a dark and violent curse</p>
+                            <p class="desc text-second mb-4 mb-xl-5">When a struggling immigrant inherits a mysterious gift from a stranger, he believes it will  bring him fame and fortune, only to discover it is the start of a dark and violent curse</p>
                             <div class="d-flex align-items-center">
                                 <div href="javascript:;" class="primary-btn nohover">SUPERNATURAL THRILLER</div>
                                 <a href="javascript:;" class="colored-btn ms-3 ms-xl-4">
@@ -104,17 +112,19 @@
             </div>
         </div>
         <div class="position-relative">
-            <img src="{{asset('website/assets/images/slide5.jpg')}}" alt="Slide" class="w-100">
+            <div class="bimgwrap">
+                <img src="{{asset('website/assets/images/slide5.jpg')}}" alt="Slide" class="w-100">
+            </div>
             <div class="position-absolute w-100 h-100 top-0 start-0 d-flex flex-column justify-content-end">
                 <div class="container py-5">
                     <div class="row">
-                        <div class="col-xl-6 col-lg-8 pb-4 pb-lg-5">
-                            <img src="{{asset('website/assets/images/slide5logo.png')}}" alt="Slide Logo" class="img-fluid mb-4 mb-lg-5">
-                            <div class="d-flex align-items-center mb-3 mb-lg-4">
+                        <div class="col-xl-6 col-lg-7 col-md-8 pb-4 pb-xl-5">
+                            <img src="{{asset('website/assets/images/slide5logo.png')}}" alt="Slide Logo" class="img-fluid mb-4 mb-xl-5">
+                            <div class="d-flex align-items-center mb-3 mb-xl-4">
                                 <img src="{{asset('website/assets/images/aqt.png')}}" alt="AQT" class="img-fluid me-2">
                                 <span class="desc lg">SERIES</span>
                             </div>
-                            <p class="desc text-second mb-4 mb-lg-5">When a struggling immigrant inherits a mysterious gift from a stranger, he believes it will  bring him fame and fortune, only to discover it is the start of a dark and violent curse</p>
+                            <p class="desc text-second mb-4 mb-xl-5">When a struggling immigrant inherits a mysterious gift from a stranger, he believes it will  bring him fame and fortune, only to discover it is the start of a dark and violent curse</p>
                             <div class="d-flex align-items-center">
                                 <div href="javascript:;" class="primary-btn nohover">SUPERNATURAL THRILLER</div>
                                 <a href="javascript:;" class="colored-btn ms-3 ms-xl-4">
@@ -129,17 +139,19 @@
             </div>
         </div>
         <div class="position-relative">
-            <img src="{{asset('website/assets/images/slide6.jpg')}}" alt="Slide" class="w-100">
+            <div class="bimgwrap">
+                <img src="{{asset('website/assets/images/slide6.jpg')}}" alt="Slide" class="w-100">
+            </div>
             <div class="position-absolute w-100 h-100 top-0 start-0 d-flex flex-column justify-content-end">
                 <div class="container py-5">
                     <div class="row">
-                        <div class="col-xl-6 col-lg-8 pb-4 pb-lg-5">
-                            <img src="{{asset('website/assets/images/slide6logo.png')}}" alt="Slide Logo" class="img-fluid mb-4 mb-lg-5">
-                            <div class="d-flex align-items-center mb-3 mb-lg-4">
+                        <div class="col-xl-6 col-lg-7 col-md-8 pb-4 pb-xl-5">
+                            <img src="{{asset('website/assets/images/slide6logo.png')}}" alt="Slide Logo" class="img-fluid mb-4 mb-xl-5">
+                            <div class="d-flex align-items-center mb-3 mb-xl-4">
                                 <img src="{{asset('website/assets/images/aqt.png')}}" alt="AQT" class="img-fluid me-2">
-                                <span class="desc lg">SERIES</span>
+                                <span class="desc lg">MOVIE</span>
                             </div>
-                            <p class="desc text-second mb-4 mb-lg-5">When a struggling immigrant inherits a mysterious gift from a stranger, he believes it will  bring him fame and fortune, only to discover it is the start of a dark and violent curse</p>
+                            <p class="desc text-second mb-4 mb-xl-5">When a struggling immigrant inherits a mysterious gift from a stranger, he believes it will  bring him fame and fortune, only to discover it is the start of a dark and violent curse</p>
                             <div class="d-flex align-items-center">
                                 <div href="javascript:;" class="primary-btn nohover">SUPERNATURAL THRILLER</div>
                                 <a href="javascript:;" class="colored-btn ms-3 ms-xl-4">
@@ -154,17 +166,19 @@
             </div>
         </div>
         <div class="position-relative">
-            <img src="{{asset('website/assets/images/slide7.jpg')}}" alt="Slide" class="w-100">
+            <div class="bimgwrap">
+                <img src="{{asset('website/assets/images/slide7.jpg')}}" alt="Slide" class="w-100">
+            </div>
             <div class="position-absolute w-100 h-100 top-0 start-0 d-flex flex-column justify-content-end">
                 <div class="container py-5">
                     <div class="row">
-                        <div class="col-xl-6 col-lg-8 pb-4 pb-lg-5">
-                            <img src="{{asset('website/assets/images/slide7logo.png')}}" alt="Slide Logo" class="img-fluid mb-4 mb-lg-5">
-                            <div class="d-flex align-items-center mb-3 mb-lg-4">
+                        <div class="col-xl-6 col-lg-7 col-md-8 pb-4 pb-xl-5">
+                            <img src="{{asset('website/assets/images/slide7logo.png')}}" alt="Slide Logo" class="img-fluid mb-4 mb-xl-5">
+                            <div class="d-flex align-items-center mb-3 mb-xl-4">
                                 <img src="{{asset('website/assets/images/aqt.png')}}" alt="AQT" class="img-fluid me-2">
                                 <span class="desc lg">SERIES</span>
                             </div>
-                            <p class="desc text-second mb-4 mb-lg-5">When a struggling immigrant inherits a mysterious gift from a stranger, he believes it will  bring him fame and fortune, only to discover it is the start of a dark and violent curse</p>
+                            <p class="desc text-second mb-4 mb-xl-5">When a struggling immigrant inherits a mysterious gift from a stranger, he believes it will  bring him fame and fortune, only to discover it is the start of a dark and violent curse</p>
                             <div class="d-flex align-items-center">
                                 <div href="javascript:;" class="primary-btn nohover">SUPERNATURAL THRILLER</div>
                                 <a href="javascript:;" class="colored-btn ms-3 ms-xl-4">

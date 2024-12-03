@@ -7,15 +7,15 @@
     <footer class="pt-4 pb-5">
         <div class="container text-center">
             <img src="{{asset('website/assets/images/aqt_lg.png')}}" alt="AQT" class="img-fluid mb-3">
-            <div>
-                <a href="javascript:;" class="d-inline-block desc md text-white fw-medium mx-3">Home</a>
-                <a href="javascript:;" class="d-inline-block desc md text-white fw-medium mx-3">Movies</a>
-                <a href="javascript:;" class="d-inline-block desc md text-white fw-medium mx-3">Series</a>
-                <a href="javascript:;" class="d-inline-block desc md text-white fw-medium mx-3">About Us</a>
-                <a href="javascript:;" class="d-inline-block desc md text-white fw-medium mx-3">Contact </a>
-                <a href="javascript:;" class="d-inline-block desc md text-white fw-medium mx-3">Careers</a>
-                <a href="javascript:;" class="d-inline-block desc md text-white fw-medium mx-3">Terms & Conditions</a>
-                <a href="javascript:;" class="d-inline-block desc md text-white fw-medium mx-3">Privacy Policy</a>
+            <div class="d-flex flex-column flex-md-row">
+                <a href="{{route('website.home')}}" class="d-inline-block desc md text-white fw-medium mx-3 my-2 my-md-0">Home</a>
+                <a href="{{route('website.movies')}}" class="d-inline-block desc md text-white fw-medium mx-3 my-2 my-md-0">Movies</a>
+                <a href="{{route('website.series')}}" class="d-inline-block desc md text-white fw-medium mx-3 my-2 my-md-0">Series</a>
+                <a href="{{route('website.about')}}" class="d-inline-block desc md text-white fw-medium mx-3 my-2 my-md-0">About Us</a>
+                <a href="{{route('website.contact')}}" class="d-inline-block desc md text-white fw-medium mx-3 my-2 my-md-0">Contact </a>
+                <a href="javascript:;" class="d-inline-block desc md text-white fw-medium mx-3 my-2 my-md-0">Careers</a>
+                <a href="javascript:;" class="d-inline-block desc md text-white fw-medium mx-3 my-2 my-md-0">Terms & Conditions</a>
+                <a href="javascript:;" class="d-inline-block desc md text-white fw-medium mx-3 my-2 my-md-0">Privacy Policy</a>
             </div>
         </div>
     </footer>
