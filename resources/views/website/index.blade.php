@@ -5,7 +5,11 @@
     <div class="banner-slider">
         <div class="position-relative">
             <div class="bimgwrap">
-                <img src="{{asset('website/assets/images/slide1.jpg')}}" alt="Slide" class="w-100">
+                <picture>
+                    <source media="(min-width: 768px)" srcset="{{asset('website/assets/images/slide1.jpg')}}">
+                    <source media="(max-width: 768px)" srcset="{{asset('website/assets/images/slide1-mobile.jpg')}}">
+                    <img src="{{asset('website/assets/images/slide1.jpg')}}" alt="Slide" class="w-100">
+                </picture>
             </div>
             <div class="position-absolute w-100 h-100 top-0 start-0 d-flex flex-column justify-content-end">
                 <div class="container py-5">
@@ -18,7 +22,7 @@
                             </div>
                             <p class="desc text-second mb-4 mb-xl-5">When a struggling immigrant inherits a mysterious gift from a stranger, he believes it will  bring him fame and fortune, only to discover it is the start of a dark and violent curse</p>
                             <div class="d-flex align-items-center">
-                                <div href="javascript:;" class="primary-btn nohover">SUPERNATURAL THRILLER</div>
+                                <div class="primary-btn nohover">SUPERNATURAL THRILLER</div>
                                 <a href="javascript:;" class="colored-btn ms-3 ms-xl-4">
                                     <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M19.3386 1.16091L1.66098 18.8386M19.3386 1.16091L18.8336 15.8081M19.3386 1.16091L4.69143 1.66599" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -32,7 +36,11 @@
         </div>
         <div class="position-relative">
             <div class="bimgwrap">
-                <img src="{{asset('website/assets/images/slide2.jpg')}}" alt="Slide" class="w-100">
+                <picture>
+                    <source media="(min-width: 768px)" srcset="{{asset('website/assets/images/slide2.jpg')}}">
+                    <source media="(max-width: 768px)" srcset="{{asset('website/assets/images/slide2-mobile.jpg')}}">
+                    <img src="{{asset('website/assets/images/slide2.jpg')}}" alt="Slide" class="w-100">
+                </picture>
             </div>
             <div class="position-absolute w-100 h-100 top-0 start-0 d-flex flex-column justify-content-end">
                 <div class="container py-5">
@@ -43,9 +51,9 @@
                                 <img src="{{asset('website/assets/images/aqt.png')}}" alt="AQT" class="img-fluid me-2">
                                 <span class="desc lg">SERIES</span>
                             </div>
-                            <p class="desc text-second mb-4 mb-xl-5">When a struggling immigrant inherits a mysterious gift from a stranger, he believes it will  bring him fame and fortune, only to discover it is the start of a dark and violent curse</p>
+                            <p class="desc text-second mb-4 mb-xl-5">It is an action adventure set in the forgotten glory of the Arab World  in today’s timeline.  It aims at celebrating the idea of Arabic pride (Fakhr) - the Arabic emotion of honoring the glories of Arabic history, tied together by common culture, ethos, language, civilization, history, individuality, geography, politics & Fantasy!</p>
                             <div class="d-flex align-items-center">
-                                <div href="javascript:;" class="primary-btn nohover">SUPERNATURAL THRILLER</div>
+                                <div class="primary-btn nohover">ADVENTURE | ACTION | FANTASY</div>
                                 <a href="javascript:;" class="colored-btn ms-3 ms-xl-4">
                                     <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M19.3386 1.16091L1.66098 18.8386M19.3386 1.16091L18.8336 15.8081M19.3386 1.16091L4.69143 1.66599" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -59,7 +67,11 @@
         </div>
         <div class="position-relative">
             <div class="bimgwrap">
-                <img src="{{asset('website/assets/images/slide3.jpg')}}" alt="Slide" class="w-100">
+                <picture>
+                    <source media="(min-width: 768px)" srcset="{{asset('website/assets/images/slide3.jpg')}}">
+                    <source media="(max-width: 768px)" srcset="{{asset('website/assets/images/slide3-mobile.jpg')}}">
+                    <img src="{{asset('website/assets/images/slide3.jpg')}}" alt="Slide" class="w-100">
+                </picture>
             </div>
             <div class="position-absolute w-100 h-100 top-0 start-0 d-flex flex-column justify-content-end">
                 <div class="container py-5">
@@ -70,9 +82,9 @@
                                 <img src="{{asset('website/assets/images/aqt.png')}}" alt="AQT" class="img-fluid me-2">
                                 <span class="desc lg">MOVIE</span>
                             </div>
-                            <p class="desc text-second mb-4 mb-xl-5">When a struggling immigrant inherits a mysterious gift from a stranger, he believes it will  bring him fame and fortune, only to discover it is the start of a dark and violent curse</p>
+                            <p class="desc text-second mb-4 mb-xl-5">Greed & Power overstep in to the Macabre Antecedents of the “Black Tongue”: a Phenomenon unleashes in retribution with never before Fury</p>
                             <div class="d-flex align-items-center">
-                                <div href="javascript:;" class="primary-btn nohover">SUPERNATURAL THRILLER</div>
+                                <div class="primary-btn nohover">HORROR | CRIME | THRILLER | SUPARNATURAL</div>
                                 <a href="javascript:;" class="colored-btn ms-3 ms-xl-4">
                                     <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M19.3386 1.16091L1.66098 18.8386M19.3386 1.16091L18.8336 15.8081M19.3386 1.16091L4.69143 1.66599" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -86,7 +98,11 @@
         </div>
         <div class="position-relative">
             <div class="bimgwrap">
-                <img src="{{asset('website/assets/images/slide4.jpg')}}" alt="Slide" class="w-100">
+                <picture>
+                    <source media="(min-width: 768px)" srcset="{{asset('website/assets/images/slide4.jpg')}}">
+                    <source media="(max-width: 768px)" srcset="{{asset('website/assets/images/slide4-mobile.jpg')}}">
+                    <img src="{{asset('website/assets/images/slide4.jpg')}}" alt="Slide" class="w-100">
+                </picture>
             </div>
             <div class="position-absolute w-100 h-100 top-0 start-0 d-flex flex-column justify-content-end">
                 <div class="container py-5">
@@ -97,9 +113,9 @@
                                 <img src="{{asset('website/assets/images/aqt.png')}}" alt="AQT" class="img-fluid me-2">
                                 <span class="desc lg">MOVIE</span>
                             </div>
-                            <p class="desc text-second mb-4 mb-xl-5">When a struggling immigrant inherits a mysterious gift from a stranger, he believes it will  bring him fame and fortune, only to discover it is the start of a dark and violent curse</p>
+                            <p class="desc text-second mb-4 mb-xl-5">Buddha reborn today as a teenager<br>The Outcaste | The Rebel | The Deliverer!</p>
                             <div class="d-flex align-items-center">
-                                <div href="javascript:;" class="primary-btn nohover">SUPERNATURAL THRILLER</div>
+                                <div class="primary-btn nohover">DRAMA | HUMOUR</div>
                                 <a href="javascript:;" class="colored-btn ms-3 ms-xl-4">
                                     <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M19.3386 1.16091L1.66098 18.8386M19.3386 1.16091L18.8336 15.8081M19.3386 1.16091L4.69143 1.66599" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -113,7 +129,11 @@
         </div>
         <div class="position-relative">
             <div class="bimgwrap">
-                <img src="{{asset('website/assets/images/slide5.jpg')}}" alt="Slide" class="w-100">
+                <picture>
+                    <source media="(min-width: 768px)" srcset="{{asset('website/assets/images/slide5.jpg')}}">
+                    <source media="(max-width: 768px)" srcset="{{asset('website/assets/images/slide5-mobile.jpg')}}">
+                    <img src="{{asset('website/assets/images/slide5.jpg')}}" alt="Slide" class="w-100">
+                </picture>
             </div>
             <div class="position-absolute w-100 h-100 top-0 start-0 d-flex flex-column justify-content-end">
                 <div class="container py-5">
@@ -124,10 +144,10 @@
                                 <img src="{{asset('website/assets/images/aqt.png')}}" alt="AQT" class="img-fluid me-2">
                                 <span class="desc lg">SERIES</span>
                             </div>
-                            <p class="desc text-second mb-4 mb-xl-5">When a struggling immigrant inherits a mysterious gift from a stranger, he believes it will  bring him fame and fortune, only to discover it is the start of a dark and violent curse</p>
+                            <p class="desc text-second mb-4 mb-xl-5">Seemingly ordinary reunions take a dark and often times deadly turn in a seven-part anthology series that explores how time and fate can be a dreadful mix!</p>
                             <div class="d-flex align-items-center">
-                                <div href="javascript:;" class="primary-btn nohover">SUPERNATURAL THRILLER</div>
-                                <a href="javascript:;" class="colored-btn ms-3 ms-xl-4">
+                                <div class="primary-btn nohover">ANTHOLOGY</div>
+                                <a href="{{route('website.apply',['returnurl'=>'seven-encounters'])}}" class="colored-btn ms-3 ms-xl-4">
                                     <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M19.3386 1.16091L1.66098 18.8386M19.3386 1.16091L18.8336 15.8081M19.3386 1.16091L4.69143 1.66599" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                     </svg>
@@ -140,7 +160,11 @@
         </div>
         <div class="position-relative">
             <div class="bimgwrap">
-                <img src="{{asset('website/assets/images/slide6.jpg')}}" alt="Slide" class="w-100">
+                <picture>
+                    <source media="(min-width: 768px)" srcset="{{asset('website/assets/images/slide6.jpg')}}">
+                    <source media="(max-width: 768px)" srcset="{{asset('website/assets/images/slide6-mobile.jpg')}}">
+                    <img src="{{asset('website/assets/images/slide6.jpg')}}" alt="Slide" class="w-100">
+                </picture>
             </div>
             <div class="position-absolute w-100 h-100 top-0 start-0 d-flex flex-column justify-content-end">
                 <div class="container py-5">
@@ -151,9 +175,9 @@
                                 <img src="{{asset('website/assets/images/aqt.png')}}" alt="AQT" class="img-fluid me-2">
                                 <span class="desc lg">MOVIE</span>
                             </div>
-                            <p class="desc text-second mb-4 mb-xl-5">When a struggling immigrant inherits a mysterious gift from a stranger, he believes it will  bring him fame and fortune, only to discover it is the start of a dark and violent curse</p>
+                            <p class="desc text-second mb-4 mb-xl-5">A struggling musician becomes obsessed with finding his lost girlfriend when she suddenly disappears the morning after he records the song destined to change his life!</p>
                             <div class="d-flex align-items-center">
-                                <div href="javascript:;" class="primary-btn nohover">SUPERNATURAL THRILLER</div>
+                                <div class="primary-btn nohover">DRAMA</div>
                                 <a href="javascript:;" class="colored-btn ms-3 ms-xl-4">
                                     <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M19.3386 1.16091L1.66098 18.8386M19.3386 1.16091L18.8336 15.8081M19.3386 1.16091L4.69143 1.66599" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -167,7 +191,11 @@
         </div>
         <div class="position-relative">
             <div class="bimgwrap">
-                <img src="{{asset('website/assets/images/slide7.jpg')}}" alt="Slide" class="w-100">
+                <picture>
+                    <source media="(min-width: 768px)" srcset="{{asset('website/assets/images/slide7.jpg')}}">
+                    <source media="(max-width: 768px)" srcset="{{asset('website/assets/images/slide7-mobile.jpg')}}">
+                    <img src="{{asset('website/assets/images/slide7.jpg')}}" alt="Slide" class="w-100">
+                </picture>
             </div>
             <div class="position-absolute w-100 h-100 top-0 start-0 d-flex flex-column justify-content-end">
                 <div class="container py-5">
@@ -178,9 +206,9 @@
                                 <img src="{{asset('website/assets/images/aqt.png')}}" alt="AQT" class="img-fluid me-2">
                                 <span class="desc lg">SERIES</span>
                             </div>
-                            <p class="desc text-second mb-4 mb-xl-5">When a struggling immigrant inherits a mysterious gift from a stranger, he believes it will  bring him fame and fortune, only to discover it is the start of a dark and violent curse</p>
+                            <p class="desc text-second mb-4 mb-xl-5">2 Teens start as petty criminals! As young Adults  terrorize the law and the masses across towns & cities with Car-Jacking, Illicit liquor, Drugs, Kidnapping, Rape, Murder… Eventually, their last exploit escalates to Prime ministers Office!. </p>
                             <div class="d-flex align-items-center">
-                                <div href="javascript:;" class="primary-btn nohover">SUPERNATURAL THRILLER</div>
+                                <div class="primary-btn nohover">CRIME | THRILLER</div>
                                 <a href="javascript:;" class="colored-btn ms-3 ms-xl-4">
                                     <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M19.3386 1.16091L1.66098 18.8386M19.3386 1.16091L18.8336 15.8081M19.3386 1.16091L4.69143 1.66599" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -325,7 +353,7 @@
                         <div class="col-md-6 mb-3">Executive Producers: <span class="text-second">Mathew Hart</span></div>
                         <div class="col-12 text-second mt-2 mb-4">Seemingly ordinary reunions take a dark and often times deadly turn in a seven part anthology series that explores how time and fate can be a dreadful mix!</div>
                         <div class="col-12">
-                            <a href="javascript:;" class="primary-btn hovered">
+                            <a href="{{route('website.apply',['returnurl'=>'seven-encounters'])}}" class="primary-btn hovered">
                                 Explore
                                 <svg class="ms-2" width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M18 9H1M18 9L10.7143 17M18 9L10.7143 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>

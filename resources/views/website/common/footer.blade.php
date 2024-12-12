@@ -7,7 +7,7 @@
     <footer class="pt-4 pb-5">
         <div class="container text-center">
             <img src="{{asset('website/assets/images/aqt_lg.png')}}" alt="AQT" class="img-fluid mb-3">
-            <div class="d-flex flex-column flex-md-row">
+            <div class="d-flex flex-column flex-md-row justify-content-md-center">
                 <a href="{{route('website.home')}}" class="d-inline-block desc md text-white fw-medium mx-3 my-2 my-md-0">Home</a>
                 <a href="{{route('website.movies')}}" class="d-inline-block desc md text-white fw-medium mx-3 my-2 my-md-0">Movies</a>
                 <a href="{{route('website.series')}}" class="d-inline-block desc md text-white fw-medium mx-3 my-2 my-md-0">Series</a>

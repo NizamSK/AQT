@@ -85,6 +85,7 @@
                 </div>
             </div>
         </div>
+        <h2 class="sec-title text-uppercase mb-4 mb-lg-5">Series</h2>
         <div class="project-single mb-5 pb-lg-5">
             <div class="row flex-md-row-reverse">
                 <div class="col-md-5 mb-4 mb-md-0">
@@ -156,7 +157,7 @@
                         <div class="col-md-6 mb-3">Executive Producers: <span class="text-second">Mathew Hart</span></div>
                         <div class="col-12 text-second mt-2 mb-4">Seemingly ordinary reunions take a dark and often times deadly turn in a seven part anthology series that explores how time and fate can be a dreadful mix!</div>
                         <div class="col-12">
-                            <a href="javascript:;" class="primary-btn hovered">
+                            <a href="{{route('website.apply',['returnurl'=>'seven-encounters'])}}" class="primary-btn hovered">
                                 Explore
                                 <svg class="ms-2" width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M18 9H1M18 9L10.7143 17M18 9L10.7143 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>

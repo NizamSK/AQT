@@ -22,6 +22,21 @@ const showLoader = ()=>{
 const hideLoader = ()=>{
     $('.form_loader').removeClass('active')
 }
+const formSuccess = (msg)=>{
+    $('#form_msg').html(msg).show()
+    setTimeout(()=>{
+        $('#form_msg').html('').hide()
+        const urlParams = new URLSearchParams(window.location.search)
+        const returnUrl = urlParams.get('returnurl')
+        window.location.href = '/'+returnUrl
+    },3000)
+}
+const formFailed = (msg)=>{
+    $('#formfailed_msg').html(msg).show()
+    setTimeout(()=>{
+        $('#formfailed_msg').html('').hide()
+    },3000)
+}
 const validationCheck = (ele,msg)=>{ // Show Validation message for an element
     hideLoader()
     $(`#${ele}_error`).html(msg).show()
@@ -54,7 +69,9 @@ const sendOtp = () => { // Logic for sending OTP on user email
         hideLoader()
         $('#email_wrap').hide().siblings('#otp_wrap').slideDown()
     })
-    .catch(error => console.error('Error:', error));
+    .catch(error => {
+        hideLoader()
+    });
 };
 const verifyOtp = () => { // Logic for verifying OTP
     showLoader()
@@ -91,4 +108,36 @@ const verifyOtp = () => { // Logic for verifying OTP
 };
 document.addEventListener('DOMContentLoaded', function () {
     setCountryCodes()
+
+    document.getElementById('submit_btn').addEventListener('click', function () {
+        const formData = new FormData(document.getElementById('apply_form'));
+        $('#main_form input').each(function(){
+            if($(this).val()==''){
+                validationCheck($(this).attr('id'), 'This field is required')
+                return;
+            }
+        })
+        fetch('/submit-form', {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content')
+            }
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.status === 'success') {
+                formSuccess('Form submitted successfully. Now redirecting to detail page')
+                // alert(data.message);
+            } else if (data.status === 'error') {
+                formFailed('An error occured. Please try again')
+                // console.error(data.errors || data.error);
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            // alert('An unexpected error occurred.');
+        });
+    });
+    
 });
