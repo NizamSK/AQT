@@ -11,7 +11,7 @@ body{
 a,a:hover{
     text-decoration: none;
 }
-input:focus, input:focus-within, textarea:focus, textarea:focus-within{
+input:focus, input:focus-within, textarea:focus, textarea:focus-within, select:focus, select:focus-within{
   box-shadow: none;
   outline: none;
 }
@@ -20,7 +20,7 @@ h1,h2,h3,h4,h5,h6{
 }
 .primary-btn{
     display: inline-block;
-    background-color: #000;
+    background-color: transparent;
     color: #fff;
     border: 1px solid #FF6600;
     padding: .75rem 1.5rem;
@@ -76,9 +76,13 @@ h1,h2,h3,h4,h5,h6{
 } */
 /*Header CSS*/
 .header-main .nav-item .nav-link{
-    color: #fff;
+    color: #AFAFAF;
     font-size: 1.125rem;
     padding: .5rem 1rem;
+}
+.header-main .nav-item .nav-link.active{
+  color: #fff;
+  font-weight: 600;
 }
 /*Header CSS*/
 .banner-slider .slick-dots{
@@ -276,7 +280,13 @@ textarea.custom-input{
   font-size: 1.25rem;
   color: #fff;
 }
+select.custom-input option{
+  font-size: 75%;
+}
 
+@media (min-width:1350px){
+  .container{max-width: 1280px;}
+}
 @media(min-width:992px) and (max-width:1199px){
     .banner-slider .bimgwrap{
         height: 60vw;

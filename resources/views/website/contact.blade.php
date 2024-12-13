@@ -42,15 +42,30 @@
                     <form class="w-100" action="javascript:;" id="contact-form">
                         <div class="mb-4">
                             <input class="custom-input" type="text" name="name" id="name" placeholder="Full name..." required>
+                            <div id="name_error" class="alert alert-danger small py-1 px-2 mt-1" style="display: none"></div>
                         </div>
                         <div class="mb-4">
                             <input class="custom-input" type="email" name="email" id="email" placeholder="E-mail address..." required>
+                            <div id="email_error" class="alert alert-danger small py-1 px-2 mt-1" style="display: none"></div>
+                        </div>
+                        <div class="mb-4">
+                            <div class="d-flex">
+                                <select name="country_code" id="country_code" class="custom-input me-2" style="width: 160px">
+                                    <option value="" disabled selected>Country code</option>
+                                </select>
+                                <input class="custom-input" type="text" name="phone" id="phone" placeholder="Phone Number..." 
+                                oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 15);" required>
+                            </div>
+                            <div id="phone_error" class="alert alert-danger small py-1 px-2 mt-1" style="display: none"></div>
                         </div>
                         <div class="mb-4">
                             <textarea class="custom-input border-0" name="question" id="question" placeholder="Your question goes here..."></textarea>
+                            <div id="question_error" class="alert alert-danger small py-1 px-2 mt-1" style="display: none"></div>
                         </div>
                         <div>
                             <button type="button" class="custom-submit" id="contact-submit">Let's do it!</button>
+                            <div id="form_error" class="alert alert-danger small py-1 px-2 mt-1" style="display: none"></div>
+                            <div id="form_msg" class="alert alert-success small py-1 px-2 mt-1" style="display: none"></div>
                         </div>
                     </form>
                 </div>
@@ -62,5 +77,5 @@
 @endsection
 
 @section('customjs')
-
+    <script src="{{asset('website/assets/js/contactform.js')}}"></script>
 @endsection

@@ -4,8 +4,11 @@ namespace App\Http\Controllers\website;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 use App\Models\Lead;
+use App\Models\Contact;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Log;
 
 class WebHomeController extends Controller
 {
@@ -36,6 +39,14 @@ class WebHomeController extends Controller
     public function contact()
     {
         return view('website.contact');
+    }
+    public function careers()
+    {
+        return view('website.careers');
+    }
+    public function careerDetail()
+    {
+        return view('website.career-detail');
     }
     public function sevenEncounters()
     {
@@ -89,4 +100,52 @@ class WebHomeController extends Controller
             ], 500);
         }
     }
+    public function submitContactForm(Request $request)
+    {
+        try {
+            // Validate the request data
+            $validator = Validator::make($request->all(), [
+                'name' => 'required|string|max:255',
+                'email' => 'required|email|max:255',
+                'country_code' => 'required|string|max:10',
+                'phone' => 'required|numeric|digits_between:6,15',
+                'question' => 'nullable|string',
+            ]);
+
+            if ($validator->fails()) {
+                return response()->json(['errors' => $validator->errors()], 422);
+            }
+
+            // Save the form data to the database
+            $contact = Contact::create([
+                'name' => $request->name,
+                'email' => $request->email,
+                'country_code' => $request->country_code,
+                'phone' => $request->phone,
+                'question' => $request->question,
+            ]);
+
+            // Send email
+            $emailData = [
+                'name' => $request->name,
+                'email' => $request->email,
+                'phone' => $request->country_code . ' ' . $request->phone,
+                'question' => $request->question,
+            ];
+
+            Mail::send('emails.contact', $emailData, function ($message) {
+                $message->to('mohd.salman@antsdigital.in')
+                    ->subject('New Contact Form Submission');
+            });
+
+            return response()->json(['message' => 'Form submitted successfully!']);
+        } catch (\Exception $e) {
+            // Log the error for debugging
+            Log::error('Contact Form Submission Error: ' . $e->getMessage());
+
+            // Return a generic error response
+            return response()->json(['message' => 'An error occurred while submitting the form. Please try again later.'], 500);
+        }
+    }
+
 }

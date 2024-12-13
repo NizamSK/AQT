@@ -29,25 +29,26 @@
                   <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                       <li class="nav-item">
-                        <a class="nav-link" href="{{route('website.home')}}">Home</a>
+                          <a class="nav-link {{ Request::routeIs('website.home') ? 'active' : '' }}" href="{{ route('website.home') }}">Home</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="{{route('website.movies')}}">Movies</a>
+                          <a class="nav-link {{ Request::routeIs('website.movies') ? 'active' : '' }}" href="{{ route('website.movies') }}">Movies</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="{{route('website.series')}}">Series</a>
+                          <a class="nav-link {{ Request::routeIs('website.series') ? 'active' : '' }}" href="{{ route('website.series') }}">Series</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="{{route('website.about')}}">About Us</a>
+                          <a class="nav-link {{ Request::routeIs('website.about') ? 'active' : '' }}" href="{{ route('website.about') }}">About Us</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="{{route('website.contact')}}">Contact</a>
+                          <a class="nav-link {{ Request::routeIs('website.contact') ? 'active' : '' }}" href="{{ route('website.contact') }}">Contact</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="javascript:;">Careers</a>
+                          <a class="nav-link {{ Request::routeIs('website.careers') ? 'active' : '' }}" href="{{ route('website.careers') }}">Careers</a>
+                          {{-- <a class="nav-link" href="javascript:;">Careers</a> --}}
                       </li>
                     </ul>
-                    <a href="javascript:;" class="primary-btn">Sign In</a>
+                    <h4 class="sec-title sm mb-0">COMING SOON AT EFM 2025</h4>
                   </div>
                 </div>
             </nav>
