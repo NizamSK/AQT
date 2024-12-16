@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use App\Models\Lead;
 use App\Models\Contact;
+use App\Models\Career;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Log;
 
@@ -47,6 +48,14 @@ class WebHomeController extends Controller
     public function careerDetail()
     {
         return view('website.career-detail');
+    }
+    public function applyJob(Request $request)
+    {
+        if (!$request->has('position')) {
+            return redirect()->route('website.home'); // Replace 'homepage' with your homepage route name
+        }
+        $position = urldecode($request->query('position'));
+        return view('website.apply-job', compact('position'));
     }
     public function sevenEncounters()
     {
@@ -148,4 +157,59 @@ class WebHomeController extends Controller
         }
     }
 
+    public function submitCareerForm(Request $request)
+    {
+        // Validate input
+        $validator = Validator::make($request->all(), [
+            'name' => 'required|string|max:255',
+            'email' => 'required|email|max:255',
+            'country_code' => 'required|string|max:5',
+            'mobile' => 'required|numeric|max_digits:15',
+            'previous_organisation' => 'required|string|max:255',
+            'experience' => 'required|string|max:50',
+            'address' => 'required|string',
+            'resume' => 'required|mimes:pdf|max:2048', // Restrict file type and size
+            'message' => 'required|string|max:2000',
+            'position' => 'required|string|max:255',
+        ]);
+
+        if ($validator->fails()) {
+            return response()->json(['errors' => $validator->errors()], 422);
+        }
+
+        // Store the file
+        if ($request->hasFile('resume')) {
+            $resumePath = $request->file('resume')->store('resumes', 'public');
+        }
+
+        // Save data in the database
+        $career = Career::create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'country_code' => $request->country_code,
+            'mobile' => $request->mobile,
+            'previous_organisation' => $request->previous_organisation,
+            'experience' => $request->experience,
+            'address' => $request->address,
+            'resume' => $resumePath ?? null,
+            'message' => $request->message,
+            'position' => $request->position,
+        ]);
+
+        // Send email
+        try {
+            Mail::send('emails.career', ['career' => $career], function ($message) use ($career) {
+                $message->to('mohd.salman@antsdigital.in', 'Admin')
+                        ->subject('New Job Application for '.$career->position.' from '.$career->name.' <'.$career->email.'>');
+        
+                if (!empty($career->resume)) {
+                    $message->attach(storage_path('app/public/' . $career->resume));
+                }
+            });
+        } catch (\Exception $e) {
+            Log::error('Email sending failed: ' . $e->getMessage());
+        }
+
+        return response()->json(['message' => 'Form submitted successfully.'], 200);
+    }
 }

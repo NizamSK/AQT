@@ -71,6 +71,7 @@ h1,h2,h3,h4,h5,h6{
     min-width: 110px;
 }
 .bg-darkgray{background-color: #1e1e1e;}
+.lh2{line-height: 2;}
 /* .formbtn.lg{
     width: 140px;
 } */
@@ -282,6 +283,21 @@ textarea.custom-input{
 }
 select.custom-input option{
   font-size: 75%;
+}
+.job-input{
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  padding: 0 1rem;
+  border: 1px solid #8C8C8C;
+  background-color: transparent;
+  color: #fff;
+}
+select.job-input option{
+  color: #000;
+}
+textarea.job-input{
+  height: 150px;
 }
 
 @media (min-width:1350px){

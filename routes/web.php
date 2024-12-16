@@ -15,8 +15,10 @@ Route::get('/about', [WebHomeController::class, 'about'])->name('website.about')
 Route::get('/contact', [WebHomeController::class, 'contact'])->name('website.contact');
 Route::get('/careers', [WebHomeController::class, 'careers'])->name('website.careers');
 Route::get('/career-detail', [WebHomeController::class, 'careerDetail'])->name('website.career.detail');
+Route::get('/apply-job', [WebHomeController::class, 'applyJob'])->name('website.apply.job');
 Route::get('/seven-encounters', [WebHomeController::class, 'sevenEncounters'])->name('website.sevenEncounters');
 Route::post('/send-otp', [OTPController::class, 'sendOtp']);
 Route::post('/verify-otp', [OTPController::class, 'verifyOtp']);
 Route::post('/submit-form', [WebHomeController::class, 'submitForm'])->name('submit.form');
 Route::post('/submit-contact-form', [WebHomeController::class, 'submitContactForm']);
+Route::post('/career-submit', [WebHomeController::class, 'submitCareerForm'])->name('career.submit');

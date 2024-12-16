@@ -13,7 +13,7 @@
                 <a href="{{route('website.series')}}" class="d-inline-block desc md text-white fw-medium mx-3 my-2 my-md-0">Series</a>
                 <a href="{{route('website.about')}}" class="d-inline-block desc md text-white fw-medium mx-3 my-2 my-md-0">About Us</a>
                 <a href="{{route('website.contact')}}" class="d-inline-block desc md text-white fw-medium mx-3 my-2 my-md-0">Contact </a>
-                <a href="javascript:;" class="d-inline-block desc md text-white fw-medium mx-3 my-2 my-md-0">Careers</a>
+                <a href="{{route('website.careers')}}" class="d-inline-block desc md text-white fw-medium mx-3 my-2 my-md-0">Careers</a>
                 <a href="javascript:;" class="d-inline-block desc md text-white fw-medium mx-3 my-2 my-md-0">Terms & Conditions</a>
                 <a href="javascript:;" class="d-inline-block desc md text-white fw-medium mx-3 my-2 my-md-0">Privacy Policy</a>
             </div>
