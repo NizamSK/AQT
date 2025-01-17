@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: aqt-container
-        image: 894486220781.dkr.ecr.us-east-1.amazonaws.com/aqt:5
+        image: 894486220781.dkr.ecr.us-east-1.amazonaws.com/aqt:latest
         ports:
         - containerPort: 3000
         envFrom:
