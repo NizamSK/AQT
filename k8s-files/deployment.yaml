@@ -1,4 +1,3 @@
----
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -20,4 +19,6 @@ spec:
         image: 894486220781.dkr.ecr.us-east-1.amazonaws.com/aqt:5
         ports:
         - containerPort: 3000
-...
+        envFrom:
+        - configMapRef:
+            name: mysql-config  # This links the ConfigMap to your application container
