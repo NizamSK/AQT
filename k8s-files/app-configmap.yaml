@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: app-config
+data:
+  DB_HOST: mysql
+  DB_PORT: "3306"
+  DB_NAME: aqt_db
+  DB_USER: aqt-user
+  DB_PASSWORD: aqt@123
