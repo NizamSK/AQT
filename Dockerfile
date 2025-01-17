@@ -1,7 +1,7 @@
 # Step 1: Use an official PHP image with Apache
 FROM php:8.2-apache
 
-# Step 2: Install system dependencies
+# Step 2: Install system dependencies and PHP extensions
 RUN apt-get update && apt-get install -y \
     git \
     unzip \
@@ -10,28 +10,33 @@ RUN apt-get update && apt-get install -y \
     libjpeg-dev \
     libfreetype6-dev \
     libzip-dev \
-    zip \
+    libxml2-dev \
+    zlib1g-dev \
     && docker-php-ext-configure gd --with-freetype --with-jpeg \
     && docker-php-ext-install gd pdo pdo_mysql zip bcmath
 
 # Step 3: Install Composer
-COPY --from=composer:2.6 /usr/bin/composer /usr/bin/composer
+RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
 # Step 4: Set working directory
 WORKDIR /var/www/html
 
-# Step 5: Copy Laravel application files
+# Step 5: Copy composer files and install dependencies
+COPY composer.json composer.lock ./
+RUN composer install --no-dev --optimize-autoloader
+
+# Step 6: Copy Laravel application files
 COPY . .
 
-# Step 6: Set permissions
+# Step 7: Set permissions
 RUN chown -R www-data:www-data /var/www/html \
     && chmod -R 755 /var/www/html/storage /var/www/html/bootstrap/cache
 
-# Step 7: Enable Apache mod_rewrite for Laravel
+# Step 8: Enable Apache mod_rewrite for Laravel
 RUN a2enmod rewrite
 
-# Step 8: Expose port
+# Step 9: Expose port
 EXPOSE 80
 
-# Step 9: Start the Apache server
+# Step 10: Start the Apache server
 CMD ["apache2-foreground"]
