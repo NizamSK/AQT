@@ -23,12 +23,14 @@ spec:
         - containerPort: 3306
         volumeMounts:
         - name: mysql-storage
-          mountPath: /var/lib/mysql
+          mountPath: /var/lib/mysql  # This is the path for MySQL data in the container
   volumeClaimTemplates:
   - metadata:
       name: mysql-storage
     spec:
-      accessModes: ["ReadWriteOnce"]
+      accessModes:
+        - ReadWriteOnce
       resources:
         requests:
           storage: 5Gi  # Adjust storage as per your needs
+      storageClassName: standard
