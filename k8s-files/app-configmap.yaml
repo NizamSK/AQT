@@ -3,6 +3,7 @@ kind: ConfigMap
 metadata:
   name: mysql-config
 data:
+  MYSQL_ROOT_PASSWORD: "aqt@123"
   DB_HOST: mysql
   DB_PORT: "3306"
   DB_NAME: aqt_db
