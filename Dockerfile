@@ -18,18 +18,15 @@ RUN apt-get update && apt-get install -y \
 # Step 3: Install Composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
-# Check if Composer is installed correctly
-RUN composer --version
-
 # Step 4: Set working directory
 WORKDIR /var/www/html
 
-# Step 5: Copy composer files and install dependencies
+# Step 5: Copy Laravel application files (including artisan) first
+COPY . .
+
+# Step 6: Copy composer files and install dependencies
 COPY composer.json composer.lock ./
 RUN composer install --no-dev --optimize-autoloader --verbose
-
-# Step 6: Copy Laravel application files
-COPY . .
 
 # Step 7: Set permissions
 RUN chown -R www-data:www-data /var/www/html \
