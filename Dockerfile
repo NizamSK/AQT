@@ -40,6 +40,6 @@ RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf
 
 RUN php artisan key:generate
 
-EXPOSE 80
+EXPOSE 3000
 
 CMD ["apache2-foreground"]
