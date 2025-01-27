@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: aqt-app
+  namespace: aqt-ns
+  labels:
+    app: aqt-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: aqt-app
+  template:
+    metadata:
+      labels:
+        app: aqt-app
+    spec:
+      containers:
+      - name: pandacloud-container
+        image: 894486220781.dkr.ecr.us-east-1.amazonaws.com/aqt-app-clone:latest
+        ports:
+        - containerPort: 3000
